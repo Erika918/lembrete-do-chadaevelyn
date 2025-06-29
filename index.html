@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chá de Bebê da Evelyn</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffafc;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #444;
+    }
+
+    .convite {
+      padding: 40px 20px;
+    }
+
+    .convite h1 {
+      color: #d96ea7;
+      font-size: 2em;
+    }
+
+    .convite p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #d96ea7;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #b04f88;
+    }
+
+    .confirmados {
+      padding: 20px;
+      background-color: #fef0f7;
+    }
+
+    .confirmados h2 {
+      margin-bottom: 20px;
+    }
+
+    #lista-confirmados {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <section class="convite">
+    <h1>🎀 Chá de Bebê da Evelyn Maria 🎀</h1>
+    <p>
+      O chá de bebê da nossa princesinha Evelyn está chegando!<br />
+      Mamãe <strong>Erika</strong> e Papai <strong>Reginaldo</strong> estão ansiosos para celebrar com você.<br />
+      📅 <strong>Data:</strong> 06 de setembro de 2025<br />
+      ⏰ <strong>Horário:</strong> 19h30<br />
+      Confirme sua presença e escolha sua fralda com carinho 💕
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9tVkzVxfXyUsI3Y00RnX-rNjWdfWNGP9Rl57eyOohUG2dOw/viewform?usp=header" target="_blank" class="btn">Confirmar Presença</a>
+  </section>
+
+  <section class="confirmados">
+    <h2>🎉 Confirmados</h2>
+    <div id="lista-confirmados">Carregando confirmações...</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
