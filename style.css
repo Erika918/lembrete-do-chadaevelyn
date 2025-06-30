@@ -74,3 +74,17 @@ th {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+@media (max-width: 600px) {
+  .convite h1 {
+    font-size: 1.5em;
+  }
+
+  .convite p {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}

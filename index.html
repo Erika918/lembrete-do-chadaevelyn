@@ -22,12 +22,12 @@
       padding: 40px 20px;
     }
 
-    .convite h1 {
+    h1 {
       color: #90084e;
       font-size: 2em;
     }
 
-    .convite p {
+    p {
       font-size: 1.1em;
       line-height: 1.6;
       margin-bottom: 20px;
@@ -42,38 +42,85 @@
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
       background-color: #b04f88;
     }
 
-    .confirmados {
-      padding: 20px;
+    #sugestao-presente {
       background-color: #fef0f7;
-    }
-
-    .confirmados h2 {
+      padding: 15px;
+      border-radius: 15px;
       margin-bottom: 20px;
+      font-weight: bold;
+      color: #90084e;
     }
 
-    #lista-confirmados {
-      max-width: 600px;
-      margin: auto;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
+
   <section class="convite">
-    <h1>🎀 Chá de Bebê da Evelyn Maria 🎀</h1>
-    <p>
-      O chá de bebê da nossa princesinha Evelyn está chegando!<br />
-      Mamãe <strong>Erika</strong> e Papai <strong>Reginaldo</strong> estão ansiosos para celebrar com você.<br />
-      📅 <strong>Data:</strong> 06 de setembro de 2025<br />
-      ⏰ <strong>Horário:</strong> 19h30<br />
-      Confirme sua presença e traga seu presente com carinho 💕
-    </p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9tVkzVxfXyUsI3Y00RnX-rNjWdfWNGP9Rl57eyOohUG2dOw/viewform?usp=header" target="_blank" class="btn">Confirmar Presença</a>
+<h1>🎀 Venha comemorar conosco 🎀</h1>
+   <p>
+  O chá de bebê da nossa princesinha Evelyn está chegando!<br />
+  Mamãe <strong>Erika</strong> e Papai <strong>Reginaldo</strong> estão ansiosos para comemorar com vocês.<br />
+  📅 <strong>Data:</strong> 06 de setembro de 2025<br />
+  ⏰ <strong>Horário:</strong> 19h30<br />
+  📍 <strong>Local:</strong> Alameda dos jacarandás 1100 – vale das acácias<br />
+  Confirme sua presença e traga seu presente com carinho 💕
+</p>
+    <!-- Sugestão automática de presente -->
+    <div id="sugestao-presente">🎁 Sugerimos: carregando sugestão...</div>
+
+    <!-- Botão de confirmação -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9tVkzVxfXyUsI3Y00RnX-rNjWdfWNGP9Rl57eyOohUG2dOw/viewform?usp=header"
+       class="btn" target="_blank">☑️ Confirmar Presença</a>
   </section>
+
+  <script>
+    window.onload = function () {
+      const opcoes = [
+         "Fralda M + sabonete de bebê",
+         "Fralda G + sabonete de bebê",
+         "Fralda G + shampoo de bebê",
+         "Fralda M + shampoo de bebê",
+         "Fralda G + condicionador de bebê",
+         "Fralda M + condicionador de bebê",
+         "Fralda M + pomada Benpantriz para bebê",
+         "Fralda G + pomada Benpantriz para bebê",
+         "Fralda G + loção hidratante para bebê",
+         "Fralda M + loção hidratante para bebê",
+         "Fralda M + talco de bebê",
+         "Fralda G + talco de bebê",
+         "Fralda G + óleo de massagem para bebê",
+         "Fralda M + óleo de massagem para bebê",
+         "Fralda G + presilha de cabelo para bebê",
+         "Fralda M + presilha de cabelo para bebê",
+         "Fralda M + escova de cabelo para bebê",
+         "Fralda G + escova de cabelo para bebê"
+      ];
+
+      const sugestao = opcoes[Math.floor(Math.random() * opcoes.length)];
+      document.getElementById("sugestao-presente").innerText = `🎁 Sugerimos: ${sugestao}`;
+    };
+  </script>
+
 </body>
 </html>
